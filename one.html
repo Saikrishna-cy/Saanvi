@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="./src/5.jpg" alt="Birthday Girl" class="birthday-girl-photo">
+        <h1>Happy Birthday, Saanvika!</h1>
+        <p>Click on a family member to see their special message!</p>
+    </div>
+    <div class="family-grid">
+        <div class="family-member" onclick="playVideo('./src/yogi_wishes.mp4')">
+            <img src="./src/father.jpg" alt="Father">
+            <p>Father</p>
+        </div>
+        <div class="family-member" onclick="playVideo('./src/mother.mp4')">
+            <img src="./src/mother.jpg" alt="Mother">
+            <p>Mother</p>
+        </div>
+        <div class="family-member" onclick="playVideo('./src/grandfather.mp4')">
+            <img src="./src/grandfather.jpg" alt="Grandfather">
+            <p>Grandfather</p>
+        </div>
+        <div class="family-member" onclick="playVideo('./src/grandmother.mp4')">
+            <img src="./src/grandmother.jpg" alt="Grandmother">
+            <p>Grandmother</p>
+        </div>
+    </div>
+    <div id="video-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video id="family-video" controls></video>
+        </div>
+    </div>
+</div>
+<script src="./src/script.js" defer></script>
+</body>
+</html>
